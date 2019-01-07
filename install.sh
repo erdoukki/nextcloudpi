@@ -49,6 +49,7 @@ source etc/library.sh
 install_script  lamp.sh
 install_script  etc/ncp-config.d/nc-nextcloud.sh
 activate_script etc/ncp-config.d/nc-nextcloud.sh
+systemctl restart mysqld # TODO this shouldn't be necessary, but somehow it's needed in Debian 9.6. Fixme
 install_script  ncp.sh
 activate_script etc/ncp-config.d/nc-init.sh
 
